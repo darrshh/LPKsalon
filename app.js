@@ -17,9 +17,10 @@ app.get("/", function (req, res) {
   res.sendFile(path.join(public, "index.html"));
 });
 
-app.post("/contact", async (req, res) => {
-  alert("Message send successfully");
-});
+// app.post("/contact", async (req, res) => {
+//   alert("Message send successfully");
+//   res.sendFile("contact.html");
+// });
 
 // app.listen(PORT, function () {
 //   console.log("running on localhost:" + PORT);

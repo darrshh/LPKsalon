@@ -252,12 +252,7 @@
             </div>
             <div class="col-lg-7 col-md-12 col-sm-12 form-column">
               <div class="form-inner">
-                <form
-                  method="post"
-                  action="/contact"
-                  id="contact-form"
-                  class="default-form"
-                >
+                <form id="contact-form" class="default-form">
                   <div class="row clearfix">
                     <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                       <input
@@ -300,11 +295,7 @@
                     <div
                       class="col-lg-12 col-md-12 col-sm-12 form-group message-btn"
                     >
-                      <button
-                        class="theme-btn-one"
-                        type="submit"
-                        name="submit-form"
-                      >
+                      <button class="theme-btn-one" onclick="myFunction()">
                         Send a message
                       </button>
                     </div>
@@ -415,11 +406,7 @@
                         best, because when you look good, we look good.
                       </p>
                     </div>
-                    <form
-                      action="contact.html"
-                      method="post"
-                      class="subscribe-form"
-                    >
+                    <form action="contact.html" class="subscribe-form">
                       <div class="form-group">
                         <input
                           type="email"
@@ -604,6 +591,13 @@
 
     <!-- main-js -->
     <script src="assets/js/script.js"></script>
+    <script>
+      function myFunction() {
+        alert(
+          "Mail sent successfully, Please Call +91 7715006404 and do a Enquiry"
+        );
+      }
+    </script>
   </body>
   <!-- End of .page_wrapper -->
 </html>

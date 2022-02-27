@@ -808,8 +808,7 @@
                             <div class="form-inner">
                                 <span class="title-text">Book</span>
                                 <p>Reach out to us and let us know if there is anything we can do for you !</p>
-                                <form   method="post"
-                                action="/contact" class="appointment-form">
+                                <form  class="appointment-form">
                                     <div class="row clearfix">
                                         <div class="col-lg-12 col-md-12 col-sm-12 form-group">
                                             <input type="text" name="name" placeholder="Your name" required="">
@@ -834,7 +833,7 @@
                                             <textarea name="message" placeholder="Write message"></textarea>
                                         </div>
                                         <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
-                                            <button type="submit" class="theme-btn-one">Book Appointment</button>
+                                            <button onclick="myFunction()"   class="theme-btn-one">Book Appointment</button>
                                         </div>
                                     </div>
                                 </form>
@@ -1032,6 +1031,11 @@
 
     <!-- main-js -->
     <script src="assets/js/script.js"></script>
+    <script>
+        function myFunction() {
+          alert("Mail sent successfully, Please Call +91 7715006404 and do a Enquiry");
+        }
+      </script>
 
 </body><!-- End of .page_wrapper -->
 </html>
