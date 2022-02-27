@@ -1,5 +1,6 @@
 var express = require("express");
-let alert = require("alert");
+const serverless = require("serverless-http");
+const router = express.Router();
 
 var path = require("path");
 const PORT = 3000;
@@ -17,15 +18,10 @@ app.get("/", function (req, res) {
   res.sendFile(path.join(public, "index.html"));
 });
 
-// app.post("/contact", async (req, res) => {
-//   alert("Message send successfully");
-//   res.sendFile("contact.html");
+app.use(`/.netlify/functions/api`, router);
+
+// app.listen(process.env.PORT, process.env.IP, function () {
+//   console.log("On Heroku Server Ports ");
 // });
 
-// app.listen(PORT, function () {
-//   console.log("running on localhost:" + PORT);
-// });
-
-app.listen(process.env.PORT, process.env.IP, function () {
-  console.log("On Heroku Server Ports ");
-});
+module.exports.handler = serverless(app);
