@@ -18,7 +18,7 @@ app.get("/", function (req, res) {
   res.sendFile(path.join(public, "index.html"));
 });
 
-app.use(`/.netlify/functions/api`, router);
+app.use(`/.netlify/functions/server`, router);
 
 // app.listen(process.env.PORT, process.env.IP, function () {
 //   console.log("On Heroku Server Ports ");
